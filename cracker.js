@@ -13,7 +13,7 @@ crackingCard.style.display = "none";
 
 function validate() {
     var password = document.getElementById("password").value;
-
+    
     if(password.length > 25 || password.length === 0) {
         return;
     } else {
@@ -30,23 +30,23 @@ function validate() {
 
 function restartWorker() {
     if(worker) worker.terminate();
-
+    
     worker = new Worker('worker.js');
-
+    
     worker.addEventListener('message', function (e) {
         var data = e.data;
         if(data.action === "completed") {
-    
+            
             // data = {guesses: number, time: number, password: string}
-    
+            
             if(data.time === 0) {
                 crackedTime.innerText = "< 1";
             }else {
                 crackedTime.innerText = data.time;
             }
-    
+            
             crackedGuesses.innerText = data.guesses;
-    
+            
             crackedCard.style.display = "block";
             crackingCard.style.display = "none";
         }else if (data.action === "midway-progress") {
