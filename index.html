@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Password Cracker</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="content" class="container">
+            <h1>Password Cracker</h1>
+            <p class="flow-text">See how long it would take to crack your password.</p>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="text" class="validate">
+                    <label for="password">Enter a Password</label>
+                </div>
+            </div>
+
+            <a id="crack-button" class="waves-effect waves-light btn" onclick="validate()">Crack My Password</a>
+            
+            <div id="cracked-card" class="row">
+                <div class="card teal lighten-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Password Cracked!</span>
+                        <p>Password cracked in <b><span id="cracked-time">ERROR</span>ms</b>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="cracker.js"></script>
+    </body>
+</html>
