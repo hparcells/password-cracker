@@ -32,7 +32,19 @@
                 <div class="card teal lighten-1">
                     <div class="card-content white-text">
                         <span class="card-title">Password Cracked!</span>
-                        <p>Password cracked in <b><span id="cracked-time">ERROR</span>ms</b>.</p>
+                        <p>Password cracked in <b><span id="cracked-time">ERROR</span>ms</b> with <b><span id="cracked-guesses">ERROR</span></b> guesses.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="cracking-card" class="row">
+                <div class="card grey darken-2">
+                    <div class="card-content white-text">
+                        <span class="card-title">Cracking Password</span>
+                        <p>
+                            Guesses: <span id="guess-live-count">0</span> <span style="opacity: 0.5">&nbsp;&nbsp;(Updates every 1,000,000 guesses)</span>
+                        </p>
+                        <br>
+                        <a id="crack-button" class="red waves-effect waves-light btn" onclick="stop()">Stop</a>
                     </div>
                 </div>
             </div>

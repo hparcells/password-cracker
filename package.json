@@ -1,0 +1,15 @@
+{
+  "name": "password-cracker",
+  "version": "1.0.0",
+  "description": "See how long it would take to crack your password.",
+  "private": true,
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "Hunter Parcells",
+  "license": "MIT"
+}
