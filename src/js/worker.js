@@ -1,5 +1,5 @@
 function crack(password) {
-    var guess = "";
+    var guess = '';
     var startTime = Date.now();
     var guesses = 0;    
     running = true;
@@ -34,7 +34,7 @@ function crack(password) {
         guesses++;
         if(guesses % 1000000 === 0) {
             self.postMessage({
-                action: "midway-progress",
+                action: 'midway-progress',
                 guesses: guesses
             });
         }
@@ -51,7 +51,7 @@ function crack(password) {
 }
 
 function getCodes(codes) {
-    var returnString = "";
+    var returnString = '';
 
     for(x in codes) {
         returnString += String.fromCharCode(codes[x]);
@@ -62,8 +62,8 @@ function getCodes(codes) {
 
 self.addEventListener('message', function (e) {
     var data = e.data;
-    if(data.action === "start") {
+    if(data.action === 'start') {
         const result = crack(data.password);
-        self.postMessage({ action: "completed", ...result })
+        self.postMessage({ action: 'completed', ...result })
     }
 }, false);
