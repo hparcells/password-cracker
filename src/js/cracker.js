@@ -11,6 +11,12 @@ var worker;
 crackedCard.style.display = 'none';
 crackingCard.style.display = 'none';
 
+document.getElementById('password').addEventListener("keyup", function(event) {
+    if(event.key === "Enter") {
+        validate();
+    }
+});
+
 function validate() {
     var password = document.getElementById('password').value;
     
