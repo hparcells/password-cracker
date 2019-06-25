@@ -9,4 +9,4 @@
 See how long it would take to crack your password.
 
 ## Use It
-Use it at [https://hparcells.me/apps/password-cracker/](https://hparcells.me/apps/password-cracker/).
+Use it at https://password-cracker.netlify.com/.
